@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do imóvel | Imóveis_Sell</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/venda.css">
+</head>
+<body class="pagina_venda">
+    <header id="div_menu">
+        <nav class="menu_links">
+            <a href="index.html">Home</a>
+            <a href="index.html#lista_imoveis">Imóveis</a>
+            <a href="venda.html" aria-current="page">Venda</a>
+            <a href="perfil.html">Perfil</a>
+            <a href="#rodape">Atendimento</a>
+        </nav>
+    </header>
+
+    <main class="detalhe">
+        <section class="galeria" aria-roledescription="carrossel">
+            <div class="quadro"><img id="foto" src="img/casa1.jpg" alt=""></div>
+            <button class="seta ant" type="button" aria-label="Foto anterior">❮</button>
+            <button class="seta prox" type="button" aria-label="Próxima foto">❯</button>
+            <div class="miniaturas" id="miniaturas"></div>
+        </section>
+
+        <aside class="painel">
+            <h1 id="titulo"></h1>
+            <p class="valor" id="valor"></p>
+            <button class="btn" id="quero" type="button">Quero essa!</button>
+            <button class="btn claro" id="salvar" type="button" aria-pressed="false">Salvar</button>
+            <div class="dono">
+                <img id="dono-img" src="img/im.png" alt="">
+                <div>
+                    <h2 id="dono-nome"></h2>
+                    <p id="dono-desc"></p>
+                </div>
+            </div>
+        </aside>
+
+        <section class="texto">
+            <h2>Descrição</h2>
+            <p id="desc"></p>
+        </section>
+
+        <section class="parecidas">
+            <h2>Casas parecidas</h2>
+            <div class="grade" id="parecidas"></div>
+        </section>
+    </main>
+    <footer id="rodape">
+
+        <div id="conteudo_rodape">
+
+            <div class="bloco_rodape">
+                <h2>Imóveis_Sell</h2>
+                <p>Encontre o imóvel ideal para você, sua família ou seu negócio.</p>
+
+                <div id="redes_sociais">
+                    <a href="#" class="icone_social" aria-label="Facebook">f</a>
+                    <a href="#" class="icone_social" aria-label="Instagram">ig</a>
+                    <a href="#" class="icone_social" aria-label="WhatsApp">wa</a>
+                    <a href="#" class="icone_social" aria-label="YouTube">▶</a>
+                </div>
+            </div>
+
+            <div class="bloco_rodape">
+                <h3>Links rápidos</h3>
+                <a href="index.html">Home</a>
+                <a href="index.html#lista_imoveis">Imóveis</a>
+                <a href="venda.html">Imóveis à venda</a>
+                <a href="#rodape">Atendimento</a>
+            </div>
+
+            <div class="bloco_rodape">
+                <h3>Contato</h3>
+                <p>E-mail: contato@imoveissell.com</p>
+                <p>Telefone: (00) 00000-0000</p>
+                <p>São Paulo - SP</p>
+            </div>
+
+        </div>
+
+        <div id="linha_rodape"></div>
+        <p id="direitos_rodape">© 2026 Imóveis_Sell. Todos os direitos reservados.</p>
+
+    </footer>
+    <div id="aviso" role="status"></div>
+    <script src="js/dados.js"></script>
+    <script src="js/venda.js"></script>
+</body>
+</html>
