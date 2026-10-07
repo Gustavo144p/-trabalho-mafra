@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu perfil e conversas | Imóveis_Sell</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/perfil.css">
+</head>
+<body class="pagina_perfil">
+    <header id="div_menu">
+        <nav class="menu_links">
+            <a href="index.html">Home</a>
+            <a href="index.html#lista_imoveis">Imóveis</a>
+            <a href="venda.html">Venda</a>
+            <a href="perfil.html" aria-current="page">Perfil</a>
+        </nav>
+    </header>
+
+    <div class="app" id="app">
+        <!-- Lateral: perfil do usuário + contatos -->
+        <aside class="lateral">
+            <section class="perfil_usuario" aria-label="Meu perfil">
+                <div class="perfil_topo">
+                    <img id="foto_usuario" src="img/Perfil.jpg" alt="Minha foto de perfil">
+                    <h1 id="nome_usuario">Visitante</h1>
+                </div>
+                <p id="desc_usuario"></p>
+                <form id="form_desc" hidden>
+                    <textarea id="campo_desc" maxlength="140" rows="3" aria-label="Descrição do perfil"></textarea>
+                    <div class="linha">
+                        <button class="btn_peq" type="submit">Salvar</button>
+                        <button class="btn_peq claro" type="button" id="cancelar_desc">Cancelar</button>
+                    </div>
+                </form>
+                <button id="editar_desc" class="link_btn" type="button">Editar descrição</button>
+            </section>
+
+            <section class="contatos" aria-label="Contatos">
+                <div class="titulo_lista">
+                    <h2>Proprietários</h2>
+                    <span id="contagem"></span>
+                </div>
+                <input
+                    id="busca_contato"
+                    class="busca_contato"
+                    type="search"
+                    placeholder="Buscar contato"
+                    aria-label="Buscar contato">
+                <div id="lista" class="lista"></div>
+            </section>
+        </aside>
+
+        <!-- Conversa -->
+        <section class="conversa" aria-label="Conversa">
+            <div id="sem_conversa" class="sem_conversa">
+                <h2>Selecione uma conversa</h2>
+                <p>Escolha um proprietário na lista ou abra um imóvel e toque em “Quero essa!”.</p>
+                <a class="btn_peq" href="venda.html">Ver imóveis</a>
+            </div>
+
+            <div id="painel_chat" class="painel_chat" hidden>
+                <header class="conversa_topo">
+                    <button
+                        id="voltar"
+                        class="icone_btn discreto"
+                        type="button"
+                        aria-label="Voltar para os contatos">❮</button>
+                    <img id="foto_contato" src="img/im.png" alt="">
+                    <div class="dados_contato">
+                        <h2 id="nome_contato"></h2>
+                        <span id="status_contato" class="status" aria-live="polite"></span>
+                    </div>
+                    <a id="ver_imovel" class="link_imovel" href="venda.html"></a>
+                </header>
+
+                <div id="mensagens" class="mensagens" role="log" aria-live="polite"></div>
+
+                <form id="form_msg" class="barra_msg" autocomplete="off">
+                    <div id="emojis" class="emojis" role="menu" aria-label="Emojis"></div>
+                    <button
+                        id="botao_emoji"
+                        class="icone_btn discreto"
+                        type="button"
+                        aria-label="Escolher emoji"
+                        aria-expanded="false">☺</button>
+                    <input
+                        id="campo_msg"
+                        class="campo"
+                        type="text"
+                        placeholder="Digite uma mensagem"
+                        aria-label="Mensagem">
+                    <button id="enviar" class="icone_btn enviar" type="submit" aria-label="Enviar mensagem">
+                        <svg
+                            viewBox="0 0 24 24"
+                            width="20"
+                            height="20"
+                            aria-hidden="true">
+                            <path d="M3 20.5v-6.7l9-1.8-9-1.8V3.5L22 12z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/dados.js"></script>
+    <script src="js/perfil.js"></script>
+</body>
+</html>
